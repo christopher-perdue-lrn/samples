@@ -94,20 +94,20 @@ LearnosityAmd.define(['jquery-v1.10.2'], function ($) {
         lrnUtils.renderComponent('CheckAnswerButton', this.$el.find('[data-lrn-component="checkAnswer"]').get(0));
 
         //Reset '.response-cell' valid/invalid classes on '.digit-cell' click
-        this.$el.find('#numberpad .digit-cell')
-            .on('click', function () {
-                $('#numberpad .response-cell').removeClass('invalid valid');
-                init.events.trigger('changed', $('#numberpad .response-cell').text());
-            });
+//         this.$el.find('#numberpad .digit-cell')
+//             .on('click', function () {
+//                 $('#numberpad .response-cell').removeClass('invalid valid');
+//                 init.events.trigger('changed', $('#numberpad .response-cell').text());
+//             });
 
-        //add on validate
-        init.events.on('validate', function () {
-            init.response = $('#numberpad .response-cell').text();
-            // Create scorer
-            var scorer = new CustomNumberPadScorer(init.question, init.response);
-            //check if answer is correct, and pass true or false to the function to update validation UI
-            addValidationUI(scorer.isValid());
-        });
+//         //add on validate
+//         init.events.on('validate', function () {
+//             init.response = $('#numberpad .response-cell').text();
+//             // Create scorer
+//             var scorer = new CustomNumberPadScorer(init.question, init.response);
+//             //check if answer is correct, and pass true or false to the function to update validation UI
+//             addValidationUI(scorer.isValid());
+//         });
         
         //tell "host API" that this question is ready
         init.events.trigger('ready');
