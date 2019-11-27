@@ -1,4 +1,3 @@
-/*global LearnosityAmd*/
 LearnosityAmd.define([
     'underscore',
     'jquery-v1.10.2'
