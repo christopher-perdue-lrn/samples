@@ -1,0 +1,86 @@
+.lrn.lrn_widget.lrn_custom {
+	font-size: 20px;
+}
+
+.lrn.lrn_widget.lrn_custom input {
+	padding: 7px;
+}
+
+.lrn.lrn_widget.lrn_custom .row-valid > td {
+	background-color: #E7F4E1;
+}
+.lrn.lrn_widget.lrn_custom .row-invalid > td {
+	background-color: #FBDDDD;
+}
+.lrn.lrn_widget.lrn_custom .btn-option {
+	width:100%;
+}
+.lrn.lrn_widget.lrn_custom .table td {
+	padding:0;
+	text-align: center;
+}
+
+.lrn.lrn_widget.lrn_custom .table-header {
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Start Custom Numberpad */
+
+#numberpad {
+  display: flex;
+  float: left;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.digit-column {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+  align-items: center;
+}
+
+.numberpad-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.response-cell {
+  height: 35px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: default;
+}
+
+/*Style the response fields red or green for incorrect/correct*/
+.response-cell.valid {
+  background-color: #E7F4E1;
+}
+
+.response-cell.invalid {
+  background-color: #FBDDDD;
+}
+
+.digit-cell {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.digit-cell, .digit-column:last-child .response-cell {
+  border-right: 1px solid #ddd;
+}
+
+.digit-cell.selected {
+  color: #fff;
+  background-color: #1aa6bf;
+}
+
+.digit-cell:not(.selected):hover {
+  background-color: #3ac6df;
+}
